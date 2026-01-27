@@ -9,3 +9,4 @@ count, total, perfect = factor_info(num)
 print("Factors:", count)
 print("Sum:", total)
 print("Perfect Number:", "Yes" if perfect else "No")
+
