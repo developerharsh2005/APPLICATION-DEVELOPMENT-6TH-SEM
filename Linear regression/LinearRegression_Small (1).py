@@ -7,7 +7,7 @@ from sklearn.metrics import r2_score
 # Load Dataset
 # ==============================
 
-file_path = r"C:\Users\KIIT0001\Desktop\APPLICATION DEVELOPMENT LABORATORY\APPLICATION-DEVELOPMENT-6TH-SEM\Linear regression\house_price_dataset_small.csv"
+file_path = (r"C:\Users\KIIT0001\Desktop\APPLICATION DEVELOPMENT LABORATORY\APPLICATION-DEVELOPMENT-6TH-SEM\Linear regression\house_price_dataset_small.csv")
 df = pd.read_csv(file_path)
 
 print("Dataset Shape:", df.shape)

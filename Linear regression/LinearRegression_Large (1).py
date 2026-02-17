@@ -3,12 +3,19 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 
-file_path = r"C:\Users\KIIT0001\Desktop\APPLICATION DEVELOPMENT LABORATORY\APPLICATION-DEVELOPMENT-6TH-SEM\Linear regression\house_price_dataset_large.csv"
+# ==============================
+# Load Dataset
+# ==============================
 
+file_path = (r"C:\Users\KIIT0001\Desktop\APPLICATION DEVELOPMENT LABORATORY\APPLICATION-DEVELOPMENT-6TH-SEM\Linear regression\house_price_dataset_large.csv")
 df = pd.read_csv(file_path)
 
 print("Dataset Shape:", df.shape)
 print(df.head())
+
+# ==============================
+# Linear Regression (Full Dataset)
+# ==============================
 
 X = df[['Size (sq ft)']].values
 y = df['Price ($)'].values
@@ -25,10 +32,14 @@ print("Slope:", model.coef_[0])
 print("Intercept:", model.intercept_)
 print("R2 Score:", r2)
 
+# ==============================
+# Plot
+# ==============================
+
 plt.figure()
 plt.scatter(X, y)
 plt.plot(X, y_pred)
 plt.xlabel("Size (sq ft)")
 plt.ylabel("Price ($)")
-plt.title("Linear Regression - Large Dataset")
+plt.title("Linear Regression - house_price_dataset_large.csv")
 plt.show()
